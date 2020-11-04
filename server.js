@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require("body-parser");
-const db = require('./public/database');
+const db = require('./database');
 const app = express();
 
 app.use(express.static('public'));
