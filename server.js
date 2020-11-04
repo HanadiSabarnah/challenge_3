@@ -1,14 +1,33 @@
-const express = require ('express');
+const express = require('express');
 const bodyParser = require("body-parser");
-const db = require("./database");
+const db = require('./public/database');
 const app = express();
-const port= 8080;
+
+app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//POST
+app.post(('/'),(req,res)=>{
+
+})
+
+//GET
+app.get(('/'),(req,res)=>{
+
+})
 
 
 
 
 
 
+
+
+
+
+
+const port = 8080;
 app.listen(port, function () {
-  console.log(`listening on port ${port}`);
+    console.log(`listening on port ${port}`);
 });
